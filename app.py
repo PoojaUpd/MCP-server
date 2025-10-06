@@ -11,7 +11,7 @@ import time
 
 # Page configuration
 st.set_page_config(
-    page_title="MCP Chatbot",
+    page_title="Fuse Chatbot",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -21,7 +21,7 @@ st.set_page_config(
 st.markdown("""
 <style>
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-image: linear-gradient(135deg, #f8f9fa 0%, #e2e6ea 100%);
     }
     .chat-message {
         padding: 1.5rem;
@@ -31,13 +31,13 @@ st.markdown("""
         flex-direction: column;
     }
     .user-message {
-        background-color: #2b5876;
-        color: white;
+        background-color: #e2e6ea;
+        color: #222;
         margin-left: 20%;
     }
     .assistant-message {
-        background-color: #4e4376;
-        color: white;
+        background-color: #f8f9fa;
+        color: #222;
         margin-right: 20%;
     }
     .error-message {
@@ -51,8 +51,8 @@ st.markdown("""
     }
     .stButton>button {
         width: 100%;
-        background-color: #667eea;
-        color: white;
+        background-color: #e2e6ea;
+        color: #222;
     }
     .connection-status {
         padding: 0.5rem;
@@ -257,14 +257,14 @@ with st.sidebar:
     show_debug = st.checkbox("Show Debug Logs", value=False)
 
 # Main chat interface
-st.title("🤖 MCP Chatbot")
+st.title("🤖 Fuse Chatbot")
 
 # Display chat messages
 chat_container = st.container()
 with chat_container:
     if len(st.session_state.messages) == 0:
         st.info("""
-        👋 Welcome to the Fuse MCP Chatbot!
+        👋 Welcome to the Fuse Chatbot!
         """)
     
     for message in st.session_state.messages:
