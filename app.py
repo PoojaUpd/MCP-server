@@ -257,22 +257,14 @@ with st.sidebar:
     show_debug = st.checkbox("Show Debug Logs", value=False)
 
 # Main chat interface
-st.title("🤖 LangChain MCP Chatbot")
-st.caption(f"Powered by {provider.title()} • {'With Memory' if use_memory else 'Stateless'}")
+st.title("🤖 MCP Chatbot")
 
 # Display chat messages
 chat_container = st.container()
 with chat_container:
     if len(st.session_state.messages) == 0:
         st.info("""
-        👋 Welcome to the LangChain MCP Chatbot!
-        
-        This chatbot uses LangChain through the Model Context Protocol.
-        
-        **Getting Started:**
-        1. Enter your MCP Server URL in the sidebar
-        2. Click "Test Connection" to verify
-        3. Start chatting!
+        👋 Welcome to the Fuse MCP Chatbot!
         """)
     
     for message in st.session_state.messages:
